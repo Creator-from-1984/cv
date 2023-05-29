@@ -1,0 +1,293 @@
+/* Обнулення стилів для всіх елементів */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Змінні з кольорами які використовувались на веб-сторнці у форматі hex */
+html {
+    --primary-color: #0C1D13;
+    --secondary: #E0EBFE;
+    --accent: #135213;
+    --black: #000;
+    --white: #fff;
+    --light-gray: #A8A8A8;
+    --gray: #595959;
+    --beige: #F5F5DCFF;
+    --background-color: #e0deda;
+    --aside-background: linear-gradient(to bottom, var(--primary-color) 20%, #375A3D);
+}
+
+.body {
+    /* Задаємо шрифт "Montserrat" */
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--background-color);
+    padding: 40px;
+}
+
+.wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--white);
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Сайдбар контейнер */
+.aside {
+    background: var(--aside-background);
+    width: 370px;
+    padding: 0;
+}
+
+/* Моє фото */
+.image {
+    object-fit: cover;
+    object-position: center 20%;
+    filter: contrast(110%) brightness(115%);
+}
+
+.about-me-container {
+    padding: 100px 90px;
+}
+
+.contacts-list {
+    list-style: none;
+}
+
+.contacts-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: lightgrey;
+    transition: color 0.3s ease;
+}
+
+.contacts-link.email {
+    text-decoration: underline;
+}
+
+.contacts-link:hover,
+.training-text:hover {
+    color: var(--beige);
+}
+
+.contacts-link-type {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--beige);
+    margin-right: 10px;
+    width: 15px;
+    display: inline-block;
+}
+
+/* Сайдбар контейнер */
+.aside-container {
+    margin: 50px 40px 0;
+}
+
+.aside-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: lightgrey;
+}
+
+.aside-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: lightgrey;
+    margin-left: 15px;
+}
+
+.aside-item::marker {
+    color: var(--beige);
+}
+
+.aside-text {
+    color: lightgrey;
+    transition: color 0.3s ease;
+}
+
+.bio-occupation {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.bio-title {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--black);
+}
+
+.bio-description {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.info-container {
+    margin-bottom: 50px;
+}
+
+.projects {
+    margin: 64px 0 50px;
+}
+
+.projects__list {
+    counter-reset: list;
+    margin-left: 1.5rem;
+}
+
+.projects__item {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    counter-increment: list;
+    margin: 6px 0;
+}
+
+.projects__item::before {
+    content: counter(list)'.';
+    position: absolute;
+    left: -1.5rem;
+    color: var(--black);
+    display: block;
+    font-weight: 700;
+}
+
+.projects__link {
+    color: #005FFF;
+    text-decoration: underline;
+}
+
+.projects__decor-line {
+    flex-grow: 1;
+    border-bottom: 1px dashed #595959;
+}
+
+.projects__skill {
+    font-size: 14px;
+    line-height: 14px;
+    color: #595959;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    color: var(--black);
+}
+
+.portfolio {
+    color: var(--primary-color);
+}
+
+.portfolio-link {
+    color: var(--accent);;
+    font-weight: 700;
+    line-height: 24px;
+    position: relative;
+}
+
+.portfolio-link,
+.company-name,
+.university {
+    transition: color .3s ease-in-out;
+}
+
+.portfolio-link:hover,
+.company-name:hover,
+.university:hover {
+    color: var(--primary-color);
+}
+
+.portfolio__item {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-left: 17px;
+    margin-bottom: 20px;
+}
+
+.portfolio__stack {
+    list-style: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: #595959;
+    position: relative;
+    font-weight: 400;
+}
+
+.company-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.company-name,
+.accent-line {
+    color: var(--accent);;
+    position: relative;
+}
+
+.working-time {
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--light-gray);
+}
+
+.profession-duties {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.profession-duties-item {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.education {
+    list-style: none;
+}
+
+.education__item {
+    margin-bottom: 15px;
+}
+
+.university {
+    color: var(--accent);
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 15px 0 10px;
+}
+
+.university-description {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
